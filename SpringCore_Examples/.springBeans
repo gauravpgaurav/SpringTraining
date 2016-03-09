@@ -10,6 +10,7 @@
 		<config>src/bean.xml</config>
 		<config>src/bean2.xml</config>
 		<config>src/AutoWire.xml</config>
+		<config>src/Coll_Injection.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

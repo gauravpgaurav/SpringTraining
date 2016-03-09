@@ -1,10 +1,22 @@
 package com.training.domains;
 
+import java.util.List;
+
 public class Invoice {
 
 	private long invoiceNumber;
 	private Customer cust;
 	private double amount;
+	
+	private List<Item> itemList;
+
+	public List<Item> getItemList() {
+		return itemList;
+	}
+
+	public void setItemList(List<Item> itemList) {
+		this.itemList = itemList;
+	}
 
 	@Override
 	public String toString() {
