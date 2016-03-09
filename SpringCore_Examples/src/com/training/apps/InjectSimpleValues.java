@@ -18,8 +18,16 @@ public class InjectSimpleValues {
 		Customer cust3 = (Customer) container.getBean(Customer.class);
 
 		System.out.println("Customer 1 : " + cust1);
+
+		System.out.println("Hash Code Customer 1 : " + cust1);
+
 		System.out.println("Customer 2 : " + cust2);
+
+		System.out.println("Hash Code Customer 2 : " + cust2);
+
 		System.out.println("Customer 3 : " + cust3);
+
+		System.out.println("Hash Code Customer 3 : " + cust3);
 
 	}
 

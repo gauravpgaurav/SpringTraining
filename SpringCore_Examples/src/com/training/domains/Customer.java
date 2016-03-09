@@ -50,10 +50,10 @@ public class Customer {
 		log.info("Set Customer Phone Number Called");
 	}
 
-	@Override
-	public String toString() {
-		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", phoneNumber=" + phoneNumber
-				+ "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", phoneNumber=" + phoneNumber
+//				+ "]";
+//	}
 
 }
