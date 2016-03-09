@@ -1,6 +1,6 @@
 package com.training.domains;
 
-import java.util.logging.*;
+import java.util.logging.Logger;
 
 public class Customer {
 
@@ -8,11 +8,21 @@ public class Customer {
 	private String customerName;
 	private long phoneNumber;
 
+	private Address addr;
+
+	public Address getAddr() {
+		return addr;
+	}
+
+	public void setAddr(Address addr) {
+		this.addr = addr;
+	}
+
 	Logger log = Logger.getLogger(this.getClass().getName());
 
 	public Customer() {
 		super();
-		log.info("Customer Initialized");
+		log.info("Customer initialised");
 	}
 
 	public Customer(int customerId, String customerName, long phoneNumber) {
@@ -20,16 +30,16 @@ public class Customer {
 		this.customerId = customerId;
 		this.customerName = customerName;
 		this.phoneNumber = phoneNumber;
-		log.info("Customer Initialized Using Fields");
 	}
 
 	public int getCustomerId() {
+		log.info("custId get called");
 		return customerId;
 	}
 
 	public void setCustomerId(int customerId) {
+		log.info("custId set called");
 		this.customerId = customerId;
-		log.info("Set Customer Id Called");
 	}
 
 	public String getCustomerName() {
@@ -38,7 +48,6 @@ public class Customer {
 
 	public void setCustomerName(String customerName) {
 		this.customerName = customerName;
-		log.info("Set Customer Name Called");
 	}
 
 	public long getPhoneNumber() {
@@ -47,13 +56,13 @@ public class Customer {
 
 	public void setPhoneNumber(long phoneNumber) {
 		this.phoneNumber = phoneNumber;
-		log.info("Set Customer Phone Number Called");
 	}
 
-//	@Override
-//	public String toString() {
-//		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", phoneNumber=" + phoneNumber
-//				+ "]";
-//	}
+	// @Override
+	// public String toString() {
+	// return "Customer [customerId=" + customerId + ", customerName=" +
+	// customerName + ", phoneNumber=" + phoneNumber
+	// + ", log=" + log + "]";
+	// }
 
 }
