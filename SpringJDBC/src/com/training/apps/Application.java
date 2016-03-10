@@ -19,9 +19,13 @@ public class Application {
 		inv.setInvoiceNumber(201);
 		inv.setCustomerName("Ramesh");
 		inv.setAmount(12.0);
-
-		// boolean result = obj.add(inv);
-		// System.out.println("Row Added : " + result);
+		boolean result =false;
+		
+		result = obj.delete(201);
+		System.out.println("Row Deleted : " + result);
+		
+		result = obj.add(inv);
+		System.out.println("Row Added : " + result);
 
 		Invoice findInvoiceObj = obj.find(201);
 		System.out.println("Find Result : " + findInvoiceObj);

@@ -2,7 +2,7 @@ package com.training.daos;
 
 import java.util.List;
 
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
+//import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
 import com.training.entity.Invoice;
@@ -32,7 +32,7 @@ public class InvoiceDaoImpl extends JdbcDaoSupport implements MyDAO<Invoice> {
 
 		// Invoice inv = getJdbcTemplate().queryForObject(sql, new
 		// BeanPropertyRowMapper<Invoice>(Invoice.class), key);
-		
+
 		Invoice inv = getJdbcTemplate().queryForObject(sql, new InvoiceRowMapper(), key);
 
 		return inv;
@@ -52,7 +52,11 @@ public class InvoiceDaoImpl extends JdbcDaoSupport implements MyDAO<Invoice> {
 
 		String sql = "delete from Invoice2016 where invoiceNumber = ?";
 
-		// getJdbcTemplate().execute(arg0, arg1)
+		int rowDeleted = getJdbcTemplate().update(sql, key);
+
+		if (rowDeleted > 0) {
+			return true;
+		}
 
 		return false;
 	}
