@@ -1,5 +1,6 @@
 package com.training.domains;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -12,9 +13,20 @@ public class Doctor {
 	@Value("9740591223")
 	private long phoneNumber;
 
+	@Autowired
+	private Patient patient;
+
 	public Doctor() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	public Patient getPatient() {
+		return patient;
+	}
+
+	public void setPatient(Patient patient) {
+		this.patient = patient;
 	}
 
 	public String getDocName() {
