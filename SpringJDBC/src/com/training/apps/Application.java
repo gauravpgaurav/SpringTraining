@@ -12,7 +12,7 @@ public class Application {
 
 	public static void main(String[] args) {
 
-		ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("bean.xml");
+		ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("resource/bean.xml");
 		InvoiceDaoImpl obj = ctx.getBean("dao", InvoiceDaoImpl.class);
 		Invoice inv = ctx.getBean("invoice", Invoice.class);
 
