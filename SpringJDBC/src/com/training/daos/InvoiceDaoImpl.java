@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
 import com.training.entity.Invoice;
 import com.training.ifaces.MyDAO;
+import com.training.utils.InvoiceRowMapper;
 
 public class InvoiceDaoImpl extends JdbcDaoSupport implements MyDAO<Invoice> {
 
@@ -29,7 +30,9 @@ public class InvoiceDaoImpl extends JdbcDaoSupport implements MyDAO<Invoice> {
 
 		String sql = "select * from Invoice2016 where invoiceNumber = ?";
 
-		Invoice inv = getJdbcTemplate().queryForObject(sql, new BeanPropertyRowMapper<Invoice>(Invoice.class), key);
+		// Invoice inv = getJdbcTemplate().queryForObject(sql, new
+		// BeanPropertyRowMapper<Invoice>(Invoice.class), key);
+		Invoice inv = getJdbcTemplate().queryForObject(sql, new InvoiceRowMapper(), key);
 
 		return inv;
 	}
@@ -38,6 +41,16 @@ public class InvoiceDaoImpl extends JdbcDaoSupport implements MyDAO<Invoice> {
 	public List<Invoice> findAll() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public boolean delete(int key) {
+
+		String sql = "delete from Invoice2016 where invoiceNumber = ?";
+
+		// getJdbcTemplate().execute(arg0, arg1)
+
+		return false;
 	}
 
 }

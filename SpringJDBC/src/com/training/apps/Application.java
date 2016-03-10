@@ -18,8 +18,8 @@ public class Application {
 		inv.setCustomerName("Ramesh");
 		inv.setAmount(12.0);
 
-		boolean result = obj.add(inv);
-		System.out.println("Row Added : " + result);
+		// boolean result = obj.add(inv);
+		// System.out.println("Row Added : " + result);
 
 		Invoice findInvoiceObj = obj.find(201);
 		System.out.println("Find Result : " + findInvoiceObj);

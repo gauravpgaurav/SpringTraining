@@ -5,7 +5,11 @@ import java.util.List;
 public interface MyDAO<T> {
 
 	public boolean add(T t);
+
+	public boolean delete(int key);
+
 	public T find(int key);
-	public List<T> findAll(); 
+
+	public List<T> findAll();
 
 }
