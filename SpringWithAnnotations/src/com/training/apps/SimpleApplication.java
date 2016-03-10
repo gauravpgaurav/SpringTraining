@@ -16,11 +16,12 @@ public class SimpleApplication {
 		System.out.println(doc1.getPatient());
 
 		System.out.println();
-		
+
 		Doctor doc2 = ctx.getBean("ent", Doctor.class);
 		System.out.println(doc2);
 		System.out.println(doc2.getPatient());
 
+		// If commented Destroy won't be Called
 		ctx.close();
 	}
 

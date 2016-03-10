@@ -1,5 +1,8 @@
 package com.training.domains;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,6 +24,18 @@ public class Doctor {
 	public Doctor() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	@PostConstruct
+	public void init() {
+
+		System.out.println("INIT CALLED ============");
+	}
+
+	@PreDestroy
+	public void destroy() {
+
+		System.out.println("DESTROY CALLED ============");
 	}
 
 	public Patient getPatient() {
