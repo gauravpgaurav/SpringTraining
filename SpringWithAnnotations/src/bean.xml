@@ -7,4 +7,9 @@
 
 	<context:annotation-config />
 	<context:component-scan base-package="com.training.domains" />
+
+	<bean id="inPat" class="com.training.domains.Patient" p:patientId="123"
+		p:patientName="Shyam">
+	</bean>
+
 </beans>

@@ -1,6 +1,7 @@
 package com.training.domains;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +15,7 @@ public class Doctor {
 	private long phoneNumber;
 
 	@Autowired
+	@Qualifier("inPat")
 	private Patient patient;
 
 	public Doctor() {
