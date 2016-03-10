@@ -32,6 +32,7 @@ public class InvoiceDaoImpl extends JdbcDaoSupport implements MyDAO<Invoice> {
 
 		// Invoice inv = getJdbcTemplate().queryForObject(sql, new
 		// BeanPropertyRowMapper<Invoice>(Invoice.class), key);
+		
 		Invoice inv = getJdbcTemplate().queryForObject(sql, new InvoiceRowMapper(), key);
 
 		return inv;
@@ -39,8 +40,11 @@ public class InvoiceDaoImpl extends JdbcDaoSupport implements MyDAO<Invoice> {
 
 	@Override
 	public List<Invoice> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+
+		String sql = "select * from Invoice2016";
+		List<Invoice> invList = getJdbcTemplate().query(sql, new InvoiceRowMapper());
+
+		return invList;
 	}
 
 	@Override

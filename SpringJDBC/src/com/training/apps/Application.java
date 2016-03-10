@@ -1,5 +1,7 @@
 package com.training.apps;
 
+import java.util.List;
+
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -23,6 +25,11 @@ public class Application {
 
 		Invoice findInvoiceObj = obj.find(201);
 		System.out.println("Find Result : " + findInvoiceObj);
+
+		List<Invoice> invoiceList = obj.findAll();
+		for (Invoice item : invoiceList)
+			System.out.println(item);
+
 		ctx.close();
 
 	}
