@@ -1,9 +1,9 @@
 package com.training.apps;
 
-import java.util.Iterator;
 import java.util.List;
 
-import org.springframework.context.ApplicationContext;
+//import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.training.domains.Invoice;
@@ -13,7 +13,9 @@ class CollectionInjection {
 
 	public static void main(String[] args) {
 
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("Coll_Injection.xml");
+		// ApplicationContext ctx = new
+		// ClassPathXmlApplicationContext("Coll_Injection.xml");
+		ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("Coll_Injection.xml");
 
 		Invoice inv = ctx.getBean(Invoice.class);
 
@@ -27,5 +29,7 @@ class CollectionInjection {
 			System.out.println(obj);
 		}
 		System.out.println("Amount" + inv.getAmount());
+
+		ctx.close();
 	}
 }

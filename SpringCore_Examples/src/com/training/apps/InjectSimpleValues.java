@@ -1,6 +1,7 @@
 package com.training.apps;
 
-import org.springframework.beans.factory.BeanFactory;
+//import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.training.domains.Customer;
@@ -9,7 +10,9 @@ public class InjectSimpleValues {
 
 	public static void main(String[] args) {
 
-		BeanFactory container = new ClassPathXmlApplicationContext("bean.xml");
+		// BeanFactory container = new
+		// ClassPathXmlApplicationContext("bean.xml");
+		ConfigurableApplicationContext container = new ClassPathXmlApplicationContext("bean.xml");
 
 		Customer cust1 = (Customer) container.getBean("custBean1");
 
@@ -28,6 +31,8 @@ public class InjectSimpleValues {
 		System.out.println("Customer 3 : " + cust3);
 
 		System.out.println("Hash Code Customer 3 : " + cust3);
+
+		container.close();
 
 	}
 
