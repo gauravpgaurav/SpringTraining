@@ -20,6 +20,9 @@ public class Application {
 
 		boolean result = obj.add(inv);
 		System.out.println("Row Added : " + result);
+
+		Invoice findInvoiceObj = obj.find(201);
+		System.out.println("Find Result : " + findInvoiceObj);
 		ctx.close();
 
 	}

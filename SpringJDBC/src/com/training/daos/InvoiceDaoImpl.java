@@ -1,5 +1,8 @@
 package com.training.daos;
 
+import java.util.List;
+
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
 import com.training.entity.Invoice;
@@ -19,6 +22,22 @@ public class InvoiceDaoImpl extends JdbcDaoSupport implements MyDAO<Invoice> {
 		}
 
 		return false;
+	}
+
+	@Override
+	public Invoice find(int key) {
+
+		String sql = "select * from Invoice2016 where invoiceNumber = ?";
+
+		Invoice inv = getJdbcTemplate().queryForObject(sql, new BeanPropertyRowMapper<Invoice>(Invoice.class), key);
+
+		return inv;
+	}
+
+	@Override
+	public List<Invoice> findAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
