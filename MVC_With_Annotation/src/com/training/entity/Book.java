@@ -11,6 +11,7 @@ public class Book {
 	private long bookNumber;
 	private String subject;
 	private String bookName;
+	private Isbn code;
 
 	public Book() {
 		super();
@@ -45,6 +46,16 @@ public class Book {
 	public void setBookName(String bookName) {
 		this.bookName = bookName;
 		log.info("%%%%% SET Book NAME CALLED %%%%%");
+	}
+
+	public Isbn getCode() {
+		log.info("##### GET Book ISBN CALLED #####");
+		return code;
+	}
+
+	public void setCode(Isbn code) {
+		this.code = code;
+		log.info("%%%%% SET Book ISBN CALLED %%%%%");
 	}
 
 }

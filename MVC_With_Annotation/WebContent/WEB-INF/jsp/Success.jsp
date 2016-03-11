@@ -12,6 +12,7 @@
 		<li>Book Number : ${bookObj.bookNumber}</li>
 		<li>Book Subject : ${bookObj.subject}</li>
 		<li>Book Name : ${bookObj.bookName}</li>
+		<li>${bookObj.code}</li>
 	</ul>
 
 </body>

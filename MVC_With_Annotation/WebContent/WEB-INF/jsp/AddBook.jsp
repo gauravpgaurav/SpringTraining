@@ -27,6 +27,23 @@
 		<form:input path="bookName" />
 		<br>
 		<hr>
+		<br>
+		<label>International Code :</label>
+		<br>
+		<form:input path="code.intlCode" />
+		<br>
+		<br>
+		<label>Book Code :</label>
+		<br>
+		<form:input path="code.bookCode" />
+		<br>
+		<br>
+		<label>Book Category :</label>
+		<br>
+		<form:input path="code.category" />
+		<br>
+		<br>
+		<hr>
 		<input type="submit" value="Add">
 	</form:form>
 </body>
