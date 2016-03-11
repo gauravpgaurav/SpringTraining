@@ -4,16 +4,29 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Enter Book Details</title>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 </head>
 <body>
 
 	<form:form method="Post" action="bookEntry.htm">
-		<label>Book Number</label>
+		<br>
+		<hr>
+		<label>Book Number :</label>
+		<br>
 		<form:input path="bookNumber" />
-		<label>Book Name</label>
+		<br>
+		<br>
+		<label>Subject :</label>
+		<br>
+		<form:select path="subject" items="${subjectCode}" />
+		<br>
+		<br>
+		<label>Book Name :</label>
+		<br>
 		<form:input path="bookName" />
+		<br>
+		<hr>
 		<input type="submit" value="Add">
 	</form:form>
 </body>

@@ -4,13 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Success Page</title>
 </head>
 <body>
 	<b>One Book With Following Details Added</b>
 	<ul>
-		<li>${bookObj.bookNumber}</li>
-		<li>${bookObj.bookName}S</li>
+		<li>Book Number : ${bookObj.bookNumber}</li>
+		<li>Book Subject : ${bookObj.subject}</li>
+		<li>Book Name : ${bookObj.bookName}</li>
 	</ul>
 
 </body>

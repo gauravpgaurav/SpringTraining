@@ -27,6 +27,11 @@ public class BookController {
 		return mdl;
 	}
 
+	@ModelAttribute("subjectCode")
+	public String[] subjects() {
+		return new String[] { "Computer", "Novels", "Horror" };
+	}
+
 	@RequestMapping(method = RequestMethod.POST)
 	public ModelAndView onSubmit(@ModelAttribute("bookObj") Book bk) {
 
