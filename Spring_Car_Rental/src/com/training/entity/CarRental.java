@@ -1,13 +1,25 @@
 package com.training.entity;
 
+import javax.validation.constraints.*;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.stereotype.Component;
 
 @Component
 public class CarRental {
 
+	@NotEmpty(message = "Name Must Be Entered !")
 	private String name;
+
+	@Max(9999999999L)
+	@Min(1000000000L)
 	private long mobileNumber;
+
+	@NotEmpty(message = "Email Must Be Entered !")
+	@Email(message = "Email ID Should have @, .com, .in !")
 	private String email;
+
 	private String type;
 
 	public CarRental() {

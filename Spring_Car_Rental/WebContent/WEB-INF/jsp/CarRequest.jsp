@@ -11,6 +11,10 @@
 	<h2>Request Car</h2>
 	<form:form method="post" action="AddRequest">
 
+		<form:errors cssStyle="color:red" path="*" />
+		<br>
+		<br>
+		<hr>
 		<label>Name :</label>
 		<br>
 		<form:input path="name" />

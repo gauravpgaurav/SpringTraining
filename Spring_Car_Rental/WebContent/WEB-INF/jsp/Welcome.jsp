@@ -9,10 +9,10 @@
 <body>
 	<b>One Book With Following Details Added</b>
 	<ul>
-		<li>Name : ${carRentalObj.name}</li>
-		<li>Mobile Number : ${carRentalObj.mobileNumber}</li>
-		<li>Email : ${carRentalObj.email}</li>
-		<li>Car Type: ${carRentalObj.type}</li>
+		<li>Name : ${command.name}</li>
+		<li>Mobile Number : ${command.mobileNumber}</li>
+		<li>Email : ${command.email}</li>
+		<li>Car Type: ${command.type}</li>
 	</ul>
 	<hr>
 	<br>
