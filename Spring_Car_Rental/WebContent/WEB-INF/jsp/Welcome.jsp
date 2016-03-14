@@ -14,6 +14,15 @@
 		<li>Email : ${carRentalObj.email}</li>
 		<li>Car Type: ${carRentalObj.type}</li>
 	</ul>
+	<hr>
+	<br>
+	<form action="cust/check">
+		<label>ReEnter Name :</label> <br> <input type="text" name="name" />
+		<input type="submit" value="Get Previous Booking">
+	</form>
+	<hr>
+	<p>Previous Booking :</p>
+	${prevBooking}
 
 </body>
 </html>
