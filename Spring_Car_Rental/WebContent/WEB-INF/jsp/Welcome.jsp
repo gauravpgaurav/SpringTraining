@@ -7,12 +7,12 @@
 <title>Success Page</title>
 </head>
 <body>
-	<b>One Car Rental booking With Following Details Added</b>
+	<b>One Book With Following Details Added</b>
 	<ul>
-		<li>Book Number : ${bookObj.bookNumber}</li>
-		<li>Book Subject : ${bookObj.subject}</li>
-		<li>Book Name : ${bookObj.bookName}</li>
-		<li>${bookObj.code}</li>
+		<li>Name : ${carRentalObj.name}</li>
+		<li>Mobile Number : ${carRentalObj.mobileNumber}</li>
+		<li>Email : ${carRentalObj.email}</li>
+		<li>Car Type: ${carRentalObj.type}</li>
 	</ul>
 
 </body>

@@ -4,16 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Success Page</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<b>One Car Rental booking With Following Details Added</b>
-	<ul>
-		<li>Book Number : ${bookObj.bookNumber}</li>
-		<li>Book Subject : ${bookObj.subject}</li>
-		<li>Book Name : ${bookObj.bookName}</li>
-		<li>${bookObj.code}</li>
-	</ul>
-
+	<a href="AddRequest">Add Request</a>
 </body>
 </html>
