@@ -23,18 +23,18 @@ public class ShowRequestsController {
 		reqData.add(new CarRental("Rajesh", 9740593411L, "raj@abc.com", "Indica A/C"));
 		reqData.add(new CarRental("Rakesh", 9740593190L, "rak@abc.com", "Indica Non A/C"));
 
-		model.addAttribute(reqData);
+		model.addAttribute("reqData", reqData);
 		return "ShowAllRequest";
 	}
 
-	@RequestMapping(value = "/findRequest/{name}", method = RequestMethod.GET)
+	@RequestMapping(value = "/findRequest/{name }", method = RequestMethod.GET)
 	public String viewCustomerAddress(@PathVariable("name") String name, Model model) {
 
 		String msg = "10 Bookings of " + name;
 		if (name.equals("Ramesh")) {
-			msg = "20 Bookings " + name;
+			msg = "20 Bookings of" + name;
 		}
-		model.addAttribute("data", msg);
+		model.addAttribute("list", msg);
 		return "Display";
 	}
 }
