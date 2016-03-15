@@ -26,6 +26,14 @@ public class CarRental {
 		super();
 	}
 
+	public CarRental(String name, long mobileNumber, String email, String type) {
+		super();
+		this.name = name;
+		this.mobileNumber = mobileNumber;
+		this.email = email;
+		this.type = type;
+	}
+
 	public String getName() {
 		return name;
 	}

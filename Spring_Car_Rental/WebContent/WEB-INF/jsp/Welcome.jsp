@@ -16,6 +16,9 @@
 	</ul>
 	<hr>
 	<br>
+	<a href="showAll">Show All Bookings</a>
+	<hr>
+	<br>
 	<form action="cust/check">
 		<label>ReEnter Name :</label> <br> <input type="text" name="name" />
 		<input type="submit" value="Get Previous Booking">
