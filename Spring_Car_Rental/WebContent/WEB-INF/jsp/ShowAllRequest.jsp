@@ -14,7 +14,7 @@
 	<table>
 		<c:forEach items="${reqData}" var="req">
 			<tr>
-				<td><spring:url value="/findRequest/${req.name}}" var="url"
+				<td><spring:url value="/findRequest/${req.name}" var="url"
 						htmlEscape="true"></spring:url> <a href="${url}">${req.name}</a></td>
 				<td><c:out value="${req.mobileNumber}"></c:out></td>
 			</tr>

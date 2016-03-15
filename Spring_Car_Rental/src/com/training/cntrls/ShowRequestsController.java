@@ -27,12 +27,12 @@ public class ShowRequestsController {
 		return "ShowAllRequest";
 	}
 
-	@RequestMapping(value = "/findRequest/{name }", method = RequestMethod.GET)
+	@RequestMapping(value = "/findRequest/{name}", method = RequestMethod.GET)
 	public String viewCustomerAddress(@PathVariable("name") String name, Model model) {
 
 		String msg = "10 Bookings of " + name;
 		if (name.equals("Ramesh")) {
-			msg = "20 Bookings of" + name;
+			msg = "20 Bookings of " + name;
 		}
 		model.addAttribute("list", msg);
 		return "Display";
